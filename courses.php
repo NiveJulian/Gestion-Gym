@@ -30,9 +30,9 @@
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header">
-						<b>Lista de cursos y tarifas</b>
+						<b>Lista de actividades y tarifas</b>
 						<span class="float:right"><a class="btn btn-primary col-sm-6 col-md-2 float-right" href="javascript:void(0)" id="new_course">
-								<i class="fa fa-plus"></i> Curso
+								<i class="fa fa-plus"></i> Agregar Actividad
 							</a></span>
 
 					</div>
@@ -41,7 +41,7 @@
 							<thead>
 								<tr>
 									<th class="text-center">#</th>
-									<th class="">Curso/Nivel</th>
+									<th class="">Nombre de Actividad</th>
 									<th class="">Descripción</th>
 									<th class="">Costo total</th>
 									<th class="text-center">Acción</th>
@@ -101,16 +101,16 @@
 		$('table').dataTable()
 	})
 	$('#new_course').click(function() {
-		uni_modal("Entrada de nuevos cursos y tarifas", "manage_course.php", 'large')
+		uni_modal("Entrada de nuevas Actividades y tarifas", "manage_course.php", 'large')
 
 	})
 
 	$('.edit_course').click(function() {
-		uni_modal("Administrar la entrada de cursos y tarifas", "manage_course.php?id=" + $(this).attr('data-id'), 'large')
+		uni_modal("Administrar la entrada de Actividades y tarifas", "manage_course.php?id=" + $(this).attr('data-id'), 'large')
 
 	})
 	$('.delete_course').click(function() {
-		_conf("¿Deseas eliminar este curso?", "delete_course", [$(this).attr('data-id')])
+		_conf("¿Deseas eliminar esta Actividad?", "delete_course", [$(this).attr('data-id')])
 	})
 
 	function delete_course($id) {

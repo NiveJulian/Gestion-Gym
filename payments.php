@@ -10,7 +10,7 @@
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header">
-						<b>Pagps </b>
+						<b>Pagos </b>
 						<span class="float:right"><a class="btn btn-primary col-md-1 col-sm-6 float-right" href="javascript:void(0)" id="new_payment">
 								<i class="fa fa-plus"></i> Pago
 							</a></span>
@@ -22,7 +22,7 @@
 									<th class="text-center">#</th>
 									<th class="">Fecha</th>
 									<th class="">ID No.</th>
-									<th class="">No Curso</th>
+									<th class="">No Cliente</th>
 									<th class="">Nombre</th>
 									<th class="">Monto Pagado</th>
 									<th class="text-center">Acción</th>

@@ -31,9 +31,9 @@
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header">
-						<b>Lista de Estudiantes </b>
+						<b>Lista de Clientes </b>
 						<span class="float:right"><a class="btn btn-primary col-md-1 col-sm-6 float-right" href="javascript:void(0)" id="new_student">
-								<i class="fa fa-plus"></i> Estudiante
+								<i class="fa fa-plus"></i> Cliente
 							</a></span>
 					</div>
 					<div class="card-body">
@@ -103,15 +103,15 @@
 		$('table').dataTable()
 	})
 	$('#new_student').click(function() {
-		uni_modal("Nuevo Estudiante ", "manage_student.php", "mid-large")
+		uni_modal("Nuevo Cliente ", "manage_student.php", "mid-large")
 
 	})
 	$('.edit_student').click(function() {
-		uni_modal("Gestionar Información de Estudiante", "manage_student.php?id=" + $(this).attr('data-id'), "mid-large")
+		uni_modal("Gestionar Información de Cliente", "manage_student.php?id=" + $(this).attr('data-id'), "mid-large")
 
 	})
 	$('.delete_student').click(function() {
-		_conf("Deseas eliminar este estudiante? ", "delete_student", [$(this).attr('data-id')])
+		_conf("Deseas eliminar este Cliente? ", "delete_student", [$(this).attr('data-id')])
 	})
 
 	function delete_student($id) {

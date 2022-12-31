@@ -3404,20 +3404,20 @@ input[type="button"].btn-block {
 .dropdown-item {
   display: block;
   width: 100%;
-  padding: 0.25rem 1.5rem;
-  clear: both;
+  padding: .25rem 1.5rem;
+  color: #ffffff;
   font-weight: 400;
-  color: #212529;
   text-align: inherit;
-  white-space: nowrap;
-  background-color: transparent;
   border: 0;
+}
+
+.drop-item a{
+  color: #ffffffc4;
 }
 
 .dropdown-item:hover, .dropdown-item:focus {
   color: #16181b;
   text-decoration: none;
-  background-color: #f8f9fa;
 }
 
 .dropdown-item.active, .dropdown-item:active {

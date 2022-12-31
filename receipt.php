@@ -48,9 +48,9 @@ while ($row = $payments->fetch_array()) {
 	<hr>
 	<div class="flex">
 		<div class="w-50">
-			<p>No de Curso: <b><?php echo $ef_no ?></b></p>
-			<p>Estudiante: <b><?php echo ucwords($sname) ?></b></p>
-			<p>Curso/Nivel: <b><?php echo $class ?></b></p>
+			<p>No de Cliente: <b><?php echo $ef_no ?></b></p>
+			<p>Cliente: <b><?php echo ucwords($sname) ?></b></p>
+			<p>Actividad/Nivel: <b><?php echo $class ?></b></p>
 		</div>
 		<?php if ($_GET['pid'] > 0) : ?>
 			<div class="w-50">

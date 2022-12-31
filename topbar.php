@@ -13,16 +13,18 @@
 
 
 <div id="loading"></div>
-<nav class="navbar navbar-light fixed-top">
-  <div class="container-fluid mt-2 mb-2">
-    <div class="col-lg-12">
-      <div class="float-right">
-        <div class=" dropdown mr-4">
-          <a class="dropdown-item" href="ajax.php?action=logout"><i class="fa fa-power-off"></i> Logout</a>
+
+    <nav class="navbar navbar-light fixed-top">
+      
+      <div class="container-fluid mt-2 mb-2">
+        <div class="col-lg-12">
+          <div class="float-right">
+            <div class=" dropdown mr-4">
+              <a class="dropdown-item" href="ajax.php?action=logout"><i class="fa fa-power-off"></i> Logout</a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
 </nav>
 

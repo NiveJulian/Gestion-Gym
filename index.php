@@ -6,6 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
 
 
 
@@ -60,15 +61,21 @@
     max-height: calc(100%);
     max-width: calc(100%);
   }
+  
+  
 </style>
 
 <body>
+  <?php include 'menu-btn.php' ?>
   <?php include 'topbar.php' ?>
   <?php include 'navbar.php' ?>
+  
+
   <div class="toast" id="alert_toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-body text-white">
     </div>
   </div>
+
 
   <main id="view-panel">
     <?php $page = isset($_GET['page']) ? $_GET['page'] : 'home'; ?>
@@ -120,6 +127,7 @@
     </div>
   </div>
 </body>
+<script type="text/javascript" src="assets/js/responsivenav.js" charset="utf-8"></script>
 
 <script>
   window.start_load = function() {

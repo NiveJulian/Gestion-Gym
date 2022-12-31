@@ -12,7 +12,7 @@ if (isset($_GET['id'])) {
 		<div id="msg"></div>
 		<input type="hidden" name="id" value="<?php echo isset($id) ? $id : '' ?>">
 		<div class="form-group">
-			<label for="" class="control-label">No Curso/Estudiante</label>
+			<label for="" class="control-label">No Cliente</label>
 			<select name="ef_id" id="ef_id" class="custom-select input-sm select2">
 				<option value=""></option>
 				<?php

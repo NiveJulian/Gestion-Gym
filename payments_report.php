@@ -20,7 +20,7 @@ $month = isset($_GET['month']) ? $_GET['month'] : date('Y-m');
                                 <th class="text-center">#</th>
                                 <th class="">Fecha</th>
                                 <th class="">ID</th>
-                                <th class="">No Curso</th>
+                                <th class="">No Cliente</th>
                                 <th class="">Nombre</th>
                                 <th class="">Monto Pagado</th>
                                 <th>Observaciones</th>

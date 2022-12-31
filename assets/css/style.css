@@ -131,11 +131,11 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Top Bar
 --------------------------------------------------------------*/
-.navbar-light{
-  background: #f9fafe;
+.navbar-light {
+  background: #0e0e0e;
 }
 #topbar {
-  background: #fff;
+  background: #f9fafe;
   height: 40px;
   font-size: 14px;
   transition: all 0.5s;
@@ -326,6 +326,8 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
 }
 
+
+
 @media (max-width: 1366px) {
   .nav-menu .drop-down .drop-down ul {
     left: -90%;
@@ -337,6 +339,8 @@ h1, h2, h3, h4, h5, h6 {
     content: "\ea9d";
   }
 }
+
+
 
 /* Get Startet Button */
 .appointment-btn {
@@ -1618,26 +1622,28 @@ section {
     bottom: 0;
 }
 nav#sidebar {
-    height: calc(100%);
-    position: fixed;
-    z-index: 99;
-    left: 19px;
-    width: 256px;
-    font-size: 12px;
-    top: 7.5em;
-    padding: 10px 0 0 9px;
-    border-radius: 12px;
+  position: fixed;
+  height: 100vh;
+  background: #0e0e0e;
+  box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
+  z-index: 99;
+  left: 0;
+  width: 270px;
+  font-size: 12px;
+  top: 5em;
+  padding: 10px 0 0 9px;
+  /* border-radius: 12px; */
 }
 a.nav-item {
-    position: relative;
-    display: block;
-    padding: .90rem 1.25rem;
-    margin-bottom: -1px;
-    background-color: #ffffffc4;
-    color: #332e38;
-    /*font-weight: 500;*/
-    font-size: 16px;
-    margin-bottom: 5px;
+  position: relative;
+  display: block;
+  padding: 0.9rem 0.25rem;
+  margin-bottom: -1px;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 8px;
 }
 a.nav-item:hover, .nav-item.active {
     background-color: rgba(60, 33, 247, 0.15);
@@ -1837,4 +1843,16 @@ label{
 }
 .display-6{
   font-size: 20px;
+}
+
+
+
+@media screen and (max-width: 720px){
+     main#view-panel{
+      width: 100%;
+      display: flex;
+      margin: 0;
+      margin-top: 4.8em;
+      padding: 30px;
+   }
 }

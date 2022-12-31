@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="assets/wysiwyg/css/plugins/help.css">
   <link rel="stylesheet" href="assets/wysiwyg/css/third_party/spell_checker.css">
   <link rel="stylesheet" href="assets/wysiwyg/css/plugins/special_characters.css">
+
+
 <script type="text/javascript" src="assets/wysiwyg/js/froala_editor.min.js"></script>
 
   <script type="text/javascript" src="assets/wysiwyg/js/plugins/align.min.js"></script>

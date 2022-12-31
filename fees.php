@@ -31,18 +31,18 @@
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header">
-						<b>Pagos de Estudiantes </b>
+						<b>Pagos de Clientes </b>
 						<span class="float:right"><a class="btn btn-primary col-sm-6 col-md-2 float-right" href="javascript:void(0)" id="new_fees">
-								<i class="fa fa-plus"></i> Pagos
+								<i class="fa fa-plus"></i> Agrega un pago
 							</a></span>
 					</div>
 					<div class="card-body">
 						<table class="table table-condensed table-bordered table-hover">
 							<thead>
-								<tr>
+									<tr>
 									<th class="text-center">#</th>
 									<th class="">ID No.</th>
-									<th class="">No. Curso</th>
+									<th class="">No. Cliente</th>
 									<th class="">Nombre</th>
 									<th class="">Tarifa</th>
 									<th class="">Pago</th>
@@ -122,11 +122,11 @@
 
 	})
 	$('#new_fees').click(function() {
-		uni_modal("Inscribir estudiante ", "manage_fee.php", "mid-large")
+		uni_modal("Inscribir Cliente", "manage_fee.php", "mid-large")
 
 	})
 	$('.edit_fees').click(function() {
-		uni_modal("Administrar los detalles de inscripción del estudiante", "manage_fee.php?id=" + $(this).attr('data-id'), "mid-large")
+		uni_modal("Administrar los detalles de inscripción del Cliente", "manage_fee.php?id=" + $(this).attr('data-id'), "mid-large")
 
 	})
 	$('.delete_fees').click(function() {
