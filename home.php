@@ -79,7 +79,7 @@
                                     <tr>
                                         <td class="text-center"><?php echo $i++ ?></td>
                                         <td>
-                                            <p><?php echo date("M d,Y H:i A", strtotime($row['date_created'])) ?></p>
+                                            <p><?php echo date("Y-m-d", strtotime($row['date_created'])) ?></p>
                                         </td>
                                         <td>
                                             <p><?php echo $row['id_no'] ?></p>

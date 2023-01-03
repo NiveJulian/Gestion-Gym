@@ -20,7 +20,7 @@
         <div class="col-lg-12">
           <div class="float-right">
             <div class=" dropdown mr-4">
-              <a class="dropdown-item" href="ajax.php?action=logout"><i class="fa fa-power-off"></i> Logout</a>
+              <a class="dropdown-item" href="ajax.php?action=logout"><i class="fa fa-power-off"></i> Cerrar Sesión</a>
             </div>
           </div>
         </div>

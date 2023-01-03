@@ -91,8 +91,10 @@ $month = isset($_GET['month']) ? $_GET['month'] : date('Y-m');
 <noscript>
     <style>
         table#report-list {
+            display:flex;
+            flex-wrap: wrap;
             width: 100%;
-            border-collapse: collapse
+            border-collapse: collapse;
         }
 
         table#report-list td,

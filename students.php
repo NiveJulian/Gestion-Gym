@@ -1,4 +1,6 @@
-<?php include('db_connect.php'); ?>
+<?php include('db_connect.php'); 
+?>
+
 <style>
 	input[type=checkbox] {
 		/* Double-sized Checkboxes */
@@ -13,6 +15,10 @@
 		transform: scale(1.3);
 		padding: 10px;
 		cursor: pointer;
+	}
+	#vence{
+		cursor: none;
+		border: none;
 	}
 </style>
 
@@ -29,7 +35,7 @@
 
 			<!-- Table Panel -->
 			<div class="col-md-12">
-				<div class="card">
+				<div class="card bg-ligth">
 					<div class="card-header">
 						<b>Lista de Clientes </b>
 						<span class="float:right"><a class="btn btn-primary col-md-1 col-sm-6 float-right" href="javascript:void(0)" id="new_student">
@@ -38,12 +44,12 @@
 					</div>
 					<div class="card-body">
 						<table class="table table-condensed table-bordered table-hover">
-							<thead>
+							<thead class="table1">
 								<tr>
 									<th class="text-center">#</th>
 									<th class="">ID No.</th>
 									<th class="">Nombre</th>
-									<th class="">Información</th>
+									<th class="">Vto de pago</th>
 									<th class="text-center">Acción</th>
 								</tr>
 							</thead>
@@ -51,27 +57,41 @@
 								<?php
 								$i = 1;
 								$student = $conn->query("SELECT * FROM student order by name asc ");
-								while ($row = $student->fetch_assoc()) :
-								?>
-									<tr>
-										<td class="text-center"><?php echo $i++ ?></td>
+								$fecha_hoy= date("Y-m-d");
+								function calcular_dias($fecha_hoy, $vencimiento){ // esta función la puedes colocar en un archivo aparte, imagino tendras un archivo para todas tus funciones
+    
+								$diferencia_dias=(strtotime($fecha_hoy)-strtotime($vencimiento))/86400; // transformación para poder restar las fechas sin tener problemas con años bisiestos y demás
+								$diferencia_dias=abs($diferencia_dias); // Para garantizar que el número de dias de positivo (valor absoluto)
+								$diferencia_dias=floor($diferencia_dias); // Redondeo hacia abajo para garantizar no contar 1 día de más      
+								return $diferencia_dias; // retornamos el total de días que necesitabas
+								}
+								while ($row = $student->fetch_assoc()){
+									$fecha_hasta=$row['vencimiento']; // fecha hasta proveniente de la bd
+									$diferencia_dias= calcular_dias($fecha_hoy, $fecha_hasta); //implementamos la función
+									?>
+									<tr id="estado">
+										<td class="text-center">
+											<?php echo $i++ ?>
+										</td>
 										<td>
 											<?php echo $row['id_no'] ?>
 										</td>
 										<td>
 											<?php echo ucwords($row['name']) ?>
 										</td>
-										<td class="">
-											<p>Correo: <?php echo $row['email'] ?></p>
-											<p># Móvil: <?php echo $row['contact'] ?></p>
-											<p>Dirección: <?php echo $row['address'] ?></p>
+										<td>
+											<p>Fecha de vencimiento: </p>
+											<?php echo $row['vencimiento'] ?>
+											<p>Faltan Dias: </p>
+											<input class="" value="<?php echo $diferencia_dias; ?>" type="button" name="dias" id="vence">
 										</td>
 										<td class="text-center">
 											<button class="btn btn-primary edit_student" type="button" data-id="<?php echo $row['id'] ?>"><i class="fa fa-edit"></i></button>
+											<button data-id="https://wa.me/<?php echo $row['contact'] ?> _blank" class="btn btn-outline-success" ><i class="fa-brands fa-whatsapp"></i></button>
 											<button class="btn btn-danger delete_student" type="button" data-id="<?php echo $row['id'] ?>"><i class="fa fa-trash-alt"></i></button>
 										</td>
 									</tr>
-								<?php endwhile; ?>
+								<?php } ?>
 							</tbody>
 
 						</table>
@@ -133,4 +153,5 @@
 			}
 		})
 	}
+
 </script>

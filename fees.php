@@ -18,7 +18,7 @@
 
 <div class="container-fluid">
 
-	<div class="col-lg-12">
+<div class="col-lg-12">
 		<div class="row mb-4 mt-4">
 			<div class="col-md-12">
 
@@ -41,8 +41,6 @@
 							<thead>
 									<tr>
 									<th class="text-center">#</th>
-									<th class="">ID No.</th>
-									<th class="">No. Cliente</th>
 									<th class="">Nombre</th>
 									<th class="">Tarifa</th>
 									<th class="">Pago</th>
@@ -61,14 +59,9 @@
 								?>
 									<tr>
 										<td class="text-center"><?php echo $i++ ?></td>
+										
 										<td>
-											<p> <?php echo $row['id_no'] ?></p>
-										</td>
-										<td>
-											<p> <?php echo $row['ef_no'] ?></p>
-										</td>
-										<td>
-											<p> <?php echo ucwords($row['sname']) ?></p>
+											<p> <?php echo ucwords($row['sname']) ?> </p>
 										</td>
 										<td class="text-right">
 											<p><?php echo number_format($row['total_fee'], 2) ?></p>
@@ -96,6 +89,7 @@
 		</div>
 	</div>
 
+	
 </div>
 <style>
 	td {

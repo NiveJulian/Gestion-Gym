@@ -20,17 +20,18 @@
     .navbar{
       margin-left: 30px;
       background: none;
-      
+      position: absolute;
     }
 
     nav#sidebar {
         position: absolute;
         height: 100vh;
-        left: 20px;
+        left: 22px;
         box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
         width: 200px;
         opacity: 1.4;
-        transform: translateX(-300px);
+        z-index: 1;
+        transform: translateX(-400px);
         transition: transform .5s ease-in-out;
         /* border-radius: 12px; */
       }
@@ -54,7 +55,7 @@
       cursor: pointer;
       color: #ffffff;
       top: 10px;
-      left: 10px;
+      left: 20px;
       font-size: 25px;
       z-index: 2;
       transform: translateX(-5px)

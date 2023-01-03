@@ -21,7 +21,6 @@
 								<tr>
 									<th class="text-center">#</th>
 									<th class="">Fecha</th>
-									<th class="">ID No.</th>
 									<th class="">No Cliente</th>
 									<th class="">Nombre</th>
 									<th class="">Monto Pagado</th>
@@ -40,10 +39,7 @@
 										<tr>
 											<td class="text-center"><?php echo $i++ ?></td>
 											<td>
-												<p><?php echo date("M d,Y H:i A", strtotime($row['date_created'])) ?></p>
-											</td>
-											<td>
-												<p><?php echo $row['id_no'] ?></p>
+												<p><?php echo date("d-m-Y / H:i A", strtotime($row['date_created'])) ?></p>
 											</td>
 											<td>
 												<p><?php echo $row['ef_no'] ?></p>

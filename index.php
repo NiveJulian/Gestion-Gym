@@ -17,6 +17,8 @@
 
   ?>
 
+  
+
 </head>
 <style>
   .modal-dialog.large {
@@ -127,6 +129,8 @@
     </div>
   </div>
 </body>
+
+<script src="assets/js/vencimientos.js"></script>
 <script type="text/javascript" src="assets/js/responsivenav.js" charset="utf-8"></script>
 
 <script>

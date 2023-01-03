@@ -162,6 +162,7 @@ Class Action {
 		extract($_POST);
 		$data = " name = '".str_replace("'","&#x2019;",$name)."' ";
 		$data .= ", email = '$email' ";
+		$data .= ", vencimiento = '$vencimiento' ";
 		$data .= ", contact = '$contact' ";
 		$data .= ", about_content = '".htmlentities(str_replace("'","&#x2019;",$about))."' ";
 		if($_FILES['img']['tmp_name'] != ''){

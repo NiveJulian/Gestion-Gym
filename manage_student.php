@@ -6,7 +6,9 @@ if (isset($_GET['id'])) {
         $$k = $val;
     }
 }
+
 ?>
+
 <div class="container-fluid">
     <form action="" id="manage-student">
         <input type="hidden" name="id" value="<?php echo isset($id) ? $id : '' ?>">
@@ -24,8 +26,8 @@ if (isset($_GET['id'])) {
             <input type="text" class="form-control" name="contact" value="<?php echo isset($contact) ? $contact : '' ?>" required>
         </div>
         <div class="form-group">
-            <label for="" class="control-label">Correo</label>
-            <input type="email" class="form-control" name="email" value="<?php echo isset($email) ? $email : '' ?>" required>
+            <label for="" class="control-label">vencimiento del pago</label>
+            <input type="date" class="form-control" name="vencimiento" value="<?php echo isset($vencimiento) ? $vencimiento : '' ?>" required>
         </div>
         <div class="form-group">
             <label for="" class="control-label">Dirección</label>
@@ -39,6 +41,7 @@ if (isset($_GET['id'])) {
         $('#msg').html('')
         $('input:hidden').val('')
     })
+    
     $('#manage-student').submit(function(e) {
         e.preventDefault()
         start_load()
