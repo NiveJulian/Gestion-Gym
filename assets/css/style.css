@@ -1653,7 +1653,6 @@ a.nav-item:hover, .nav-item.active {
     color: #ffff;
 }
 main#view-panel{
-   margin-left: 250px;
     width: calc(100% - 261px);
     margin-top: 4.8em;
     padding: 0.5em;
