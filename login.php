@@ -48,33 +48,38 @@ ob_end_flush();
 	}
 </style>
 
-<body class="bg-dark">
-
+<body>
+	
 
 	<main id="main">
-
 		<div class="align-self-center w-100">
-
 			<div id="login-center" align="center">
-				<div class="card col-md-3 ">
+				<div class="card-login">
 					<div class="card-body">
-						<h1 class="text-center mb-5"><img src="assets/uploads/logo.jpg" width="249px"></h1>
+								<!-- Formulario -->
+						<form id="login-form" class="login-form">
+							<!-- Titulo -->
+							<div class="card_header">
+								<svg height="50" width="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0 0h24v24H0z" fill="none"></path>
+								<path d="M4 15h2v5h12V4H6v5H4V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6zm6-4V8l5 4-5 4v-3H2v-2h8z" fill="currentColor"></path>
+								</svg>
+								<h1 class="form_heading">Sign in</h1>
+							</div>
 
-						<form id="login-form">
 							<div class="form-group">
 								<label for="username" class="control-label">Correo</label>
 								<input type="text" id="username" name="username" class="form-control">
 							</div>
+
 							<div class="form-group">
 								<label for="password" class="control-label">Contraseña</label>
 								<input type="password" id="password" name="password" class="form-control">
 							</div>
 							<br>
-							<center><button class="btn btn-primary">Ingresar</button></center>
-							<br>
-							<br>
-							<br>
+							<button class="btn btn-primary">Ingresar</button>
 						</form>
+
 					</div>
 				</div>
 			</div>

@@ -1,5 +1,5 @@
 <?php
-
+	include ('./db_connect.php');
 ?>
 
 <div class="container-fluid">
@@ -12,7 +12,12 @@
 	<br>
 	<div class="col-lg-12">
 		<div class="card ">
-			<div class="card-header"><b>Lista de Usuarios</b>
+			<div class="card-header"><b>Usuarios</b>
+			<span class="float:right">
+					<a class="btn btn-primary float-right" href="javascript:void(0)" id="new_user">
+						<i class="fa fa-plus"></i> Usuario
+					</a>
+			</span>
 			</div>
 
 			<div class="card-body">
@@ -27,7 +32,7 @@
 					</thead>
 					<tbody>
 						<?php
-						include 'db_connect.php';
+						
 						$type = array("", "Admin", "Staff", "Alumnus/Alumna");
 						$users = $conn->query("SELECT * FROM users order by name asc");
 						$i = 1;

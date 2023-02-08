@@ -48,7 +48,7 @@ while ($row = $payments->fetch_array()) {
 	<hr>
 	<div class="flex">
 		<div class="w-50">
-			<p>No de Cliente: <b><?php echo $ef_no ?></b></p>
+			<p>Razon de pago: <b><?php echo $ef_no ?></b></p>
 			<p>Cliente: <b><?php echo ucwords($sname) ?></b></p>
 			<p>Actividad/Nivel: <b><?php echo $class ?></b></p>
 		</div>

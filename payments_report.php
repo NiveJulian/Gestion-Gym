@@ -31,6 +31,7 @@ $month = isset($_GET['month']) ? $_GET['month'] : date('Y-m');
                             $i = 1;
                             $total = 0;
                             $payments = $conn->query("SELECT p.*,s.name as sname, ef.ef_no,s.id_no FROM payments p inner join student_ef_list ef on ef.id = p.ef_id inner join student s on s.id = ef.student_id where date_format(p.date_created,'%Y-%m') = '$month' order by unix_timestamp(p.date_created) asc ");
+                            
                             if ($payments->num_rows > 0) :
                                 while ($row = $payments->fetch_array()) :
                                     $total += $row['amount'];
@@ -38,7 +39,7 @@ $month = isset($_GET['month']) ? $_GET['month'] : date('Y-m');
                                     <tr>
                                         <td class="text-center"><?php echo $i++ ?></td>
                                         <td>
-                                            <p> <?php echo date("M d,Y H:i A", strtotime($row['id_no'])) ?></p>
+                                            <p> <?php echo date("d-m-Y / H:i A", strtotime($row['date_created'])) ?></p>
                                         </td>
                                         <td>
                                             <p> <?php echo $row['id_no'] ?></p>
@@ -125,7 +126,7 @@ $month = isset($_GET['month']) ? $_GET['month'] : date('Y-m');
         var ns = $('noscript').clone();
         ns.append(_c)
         var nw = window.open('', '_blank', 'width=900,height=600')
-        nw.document.write('<p class="text-center"><b>Reporte de Pago de <?php echo date("F, Y", strtotime($month)) ?></b></p>')
+        nw.document.write('<p class="text-center"><b>Reporte de Pago de <?php echo date("m d,Y", strtotime($month)) ?></b></p>')
         nw.document.write(ns.html())
         nw.document.close()
         nw.print()

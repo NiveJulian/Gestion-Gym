@@ -12,7 +12,11 @@
 <script type="text/javascript" src="assets/js/jquery.datetimepicker.full.min.js"></script>
 <script type="text/javascript" src="assets/font-awesome/js/all.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery-te-1.4.0.min.js" charset="utf-8"></script>
-<script type="text/javascript" src="assets/js/vencimientos.js"></script>
+<script type="text/javascript" src="assets/js/vencimiento.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="assets/js/push.min.js"></script>
+<script src="assets/js/mostrarclientes.js"></script>
+
 
 
 
@@ -45,7 +49,7 @@
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
     Por Soluciones hablanos haciendo click aca
-    <a href="https://wa.me/3772430213">ConfigLife</a>
+    <a href="https://wa.me/3772430213">J Niveyro</a>
   </div> 
   <!-- Copyright-->
 </footer>

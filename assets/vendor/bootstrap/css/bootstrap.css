@@ -572,9 +572,8 @@ pre code {
 }
 
 .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 5px;
+  padding-left: 5px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -2933,12 +2932,12 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
 }
 
-.btn-outline-success {
+.btn-outline-success, .btn-wp {
   color: #28a745;
   border-color: #28a745;
 }
 
-.btn-outline-success:hover {
+.btn-outline-success:hover, .btn-wp:hover {
   color: #fff;
   background-color: #28a745;
   border-color: #28a745;
@@ -4740,7 +4739,6 @@ input[type="button"].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
@@ -4772,7 +4770,7 @@ input[type="button"].btn-block {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   min-height: 1px;
-  padding: 1.25rem;
+  padding: .55rem;
 }
 
 .card-title {

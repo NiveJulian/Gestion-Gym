@@ -133,10 +133,6 @@
 		margin: unset
 	}
 
-	img {
-		max-width: 100px;
-		max-height: :150px;
-	}
 </style>
 <noscript>
 	<style>

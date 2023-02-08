@@ -28,7 +28,7 @@ if (isset($_GET['id'])) {
 			</select>
 		</div>
 		<div class="form-group">
-			<label for="" class="control-label">Curso</label>
+			<label for="" class="control-label">Actividad</label>
 			<select name="course_id" id="course_id" class="custom-select input-sm select2">
 				<option value=""></option>
 				<?php
@@ -78,7 +78,7 @@ if (isset($_GET['id'])) {
 						location.reload()
 					}, 1000)
 				} else if (resp == 2) {
-					$('#msg').html('<div class="alert alert-danger">Número de Curso Existe Actualmente</div>')
+					$('#msg').html('<div class="alert alert-danger">Razon de pago ya Existe Actualmente</div>')
 					end_load()
 				}
 			}

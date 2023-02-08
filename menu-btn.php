@@ -5,31 +5,41 @@
 	cursor: pointer;
 	top: 15px;
 	left: 30px;
-	z-index: 2;
+	z-index: 102;
 	color: #000000;
     transform: translateX(-3000px)
 }
 
 @media screen and (max-width: 720px){
     body{
-      background: #181b22;
+      background: linear-gradient(45deg, #bbdcf4, #feecfe);
+    }
+    .modal-content {
+    position: absolute;
+    width: 400px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
     }
     .mx-lt-5{
       background: none;
     }
     .navbar{
-      margin-left: 30px;
       background: none;
       position: absolute;
+      
+    }
+
+    .navbar-light {
+      box-shadow: 0 .65rem 1.75rem 0 rgba(0, 0, 0, 0.15)!important;
     }
 
     nav#sidebar {
+        position: block;
         position: absolute;
         height: 100vh;
         left: 22px;
-        box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
-        width: 200px;
-        opacity: 1.4;
+        width: 250px;
         z-index: 1;
         transform: translateX(-400px);
         transition: transform .5s ease-in-out;
@@ -38,6 +48,7 @@
       
     .sidebar-list{
       display: block;
+      position: fixed;
       width: 100%;
       height: 100vh;
       position: absolute;
@@ -52,18 +63,19 @@
 
     .menu-btn{
       position: absolute;
+      width: 50px;
       cursor: pointer;
-      color: #ffffff;
-      top: 10px;
+      color: #002003;
+      top: 20px;
       left: 20px;
       font-size: 25px;
-      z-index: 2;
+      z-index: 101;
       transform: translateX(-5px)
       }
     
     nav#sidebar.show,
     .sidebar-list.show {
-      transform: translateX(-20px);
+      transform: translateX(-23px);
     }
 
      .sidebar-list{
